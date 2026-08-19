@@ -1,0 +1,9 @@
+{
+	"id": "hider-wren",
+	"name": "Tab Bar Hider",
+	"version": "1.0.0",
+	"minAppVersion": "1.13.1",
+	"description": "Toggle the Obsidian tab bar with a draggable hidden header.",
+	"author": "wren",
+	"isDesktopOnly": true
+}

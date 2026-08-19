@@ -1,0 +1,21 @@
+/* Hide the tab bar but preserve its normal height as a transparent drag region. */
+.hider-wren-tabs .mod-root .workspace-tabs .workspace-tab-header-container {
+	position: relative;
+	visibility: hidden;
+	-webkit-app-region: no-drag;
+}
+
+.hider-wren-tabs .mod-root .workspace-tabs .workspace-tab-header-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: visible;
+	-webkit-app-region: drag;
+}
+
+.hider-wren-tabs .mod-top-left-space .view-header {
+	padding-left: calc(var(--frame-left-space) + var(--size-4-3));
+}
