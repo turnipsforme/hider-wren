@@ -1,31 +1,18 @@
-/* Collapse the header instead of only hiding its contents, which removes the top lip. */
+/* Preserve the header height as a transparent window drag region while hiding tabs. */
 .hider-wren-tabs .mod-root .workspace-tabs .workspace-tab-header-container {
-	height: 0 !important;
-	min-height: 0 !important;
-	max-height: 0 !important;
-	margin: 0 !important;
-	border: 0 !important;
-	opacity: 0;
-	transform: translateY(-6px);
-	pointer-events: none;
+	position: relative;
+	visibility: hidden;
+	-webkit-app-region: no-drag;
 }
 
-.mod-root .workspace-tabs .workspace-tab-header-container {
-	height: var(--header-height);
-	min-height: var(--header-height);
-	overflow: hidden;
-	opacity: 1;
-	transform: translateY(0);
-	transition: height 140ms ease, min-height 140ms ease, opacity 100ms ease,
-		transform 140ms ease;
+.hider-wren-tabs .mod-root .workspace-tabs .workspace-tab-header-container::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	visibility: visible;
+	-webkit-app-region: drag;
 }
 
 .hider-wren-tabs .mod-top-left-space .view-header {
 	padding-left: calc(var(--frame-left-space) + var(--size-4-3));
-}
-
-@media (prefers-reduced-motion: reduce) {
-	.mod-root .workspace-tabs .workspace-tab-header-container {
-		transition: none;
-	}
 }
