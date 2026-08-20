@@ -1,6 +1,6 @@
 # Tab Bar Hider
 
-An Obsidian desktop plugin that toggles the tab bar while preserving its height as a draggable hidden header.
+An Obsidian desktop plugin that toggles the tab bar with a small fade-and-slide animation.
 
 ## Install with BRAT
 
