@@ -1,7 +1,16 @@
-/* Preserve the header height as a transparent window drag region while hiding tabs. */
-.hider-wren-tabs .mod-root .workspace-tabs .workspace-tab-header-container {
+/* Overlay the hidden header so the editor occupies its former space. */
+.hider-wren-tabs .mod-root .workspace-tabs {
 	position: relative;
+}
+
+.hider-wren-tabs .mod-root .workspace-tabs .workspace-tab-header-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
 	visibility: hidden;
+	background: transparent;
 	-webkit-app-region: no-drag;
 }
 
@@ -10,6 +19,7 @@
 	position: absolute;
 	inset: 0;
 	visibility: visible;
+	pointer-events: auto;
 	-webkit-app-region: drag;
 }
 
