@@ -12,6 +12,8 @@ An Obsidian desktop plugin that toggles the tab bar with a small fade-and-slide 
 
 Use the **Toggle tab bar** command from Obsidian's command palette.
 
+Enable **Auto-hide with one tab** in the plugin settings to hide the tab bar automatically when the current window has one tab open. It returns when another tab is opened.
+
 ## Development
 
 Install dependencies and build the production bundle:
